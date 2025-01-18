@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CodeMirror from "@uiw/react-codemirror";
 import { javascript } from "@codemirror/lang-javascript";
+import { EditorView } from "@codemirror/view"; // Import EditorView for line wrapping
 
 const Editor = ({
   isGenerating,
@@ -24,8 +25,13 @@ const Editor = ({
         value={code}
         onChange={setCode}
         theme="dark"
-        extensions={[javascript({ jsx: true })]}
-        style={{ fontSize: "20px" }}
+        extensions={[
+          javascript({ jsx: true }),
+          EditorView.lineWrapping, // Enable line wrapping
+        ]}
+        style={{
+          fontSize: "20px",
+        }}
       />
     </div>
   );

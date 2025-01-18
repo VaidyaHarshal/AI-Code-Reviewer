@@ -9,7 +9,7 @@ const Review = ({
   isGenerating: boolean;
 }) => {
   return (
-    <div className="h-full w-6/12 relative">
+    <div className="h-full w-6/12 relative overflow-scroll">
       {isGenerating ? (
         <Loader />
       ) : (
@@ -18,6 +18,7 @@ const Review = ({
           style={{
             fontSize: "15px",
             minHeight: "100vh",
+            padding: "20px",
             backgroundColor: "#000",
             color: "#ddd",
           }}
