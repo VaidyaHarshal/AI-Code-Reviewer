@@ -21,11 +21,8 @@ AI-Code-Reviewer is a powerful tool designed to streamline and enhance the proce
     ```
 
 2. **Install Dependencies**
-    Navigate to both the `server` and `client` directories and install dependencies:
+    Navigate to AI-Code-Reviewer directory and install dependencies:
     ```bash
-    cd server
-    npm install
-    cd ../client
     npm install
     ```
 
@@ -40,18 +37,23 @@ AI-Code-Reviewer is a powerful tool designed to streamline and enhance the proce
     node index.js
     ```
 
-2. **Start the Client**
+2. **Start the Client in AI-Code-Reviewer folder**
     ```bash
     npm run dev
     ```
 
-3. **Access the Application**
+3. **Run the ollama model in terminal**
+    ```bash
+    ollama run codellama:7b
+    ```
+
+5. **Access the Application**
     Open your web browser and navigate to:
     ```
     http://localhost:5173/
     ```
 
-4. **Upload Code for Review**
+5. **Write/Paste Code for Review**
     Use the interface to write your code or paste it directly. The AI will provide feedback and suggestions.
 
 ## Contributing
