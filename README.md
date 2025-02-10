@@ -1,50 +1,64 @@
-# React + TypeScript + Vite
+# AI-Code-Reviewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AI-Code-Reviewer is a powerful tool designed to streamline and enhance the process of code review using AI. The application leverages the Codellama:7b model from Ollama to provide insightful feedback on code quality, style, and potential improvements. It features a server-client architecture, ensuring seamless interaction between the user and the AI engine.
 
-Currently, two official plugins are available:
+## Features
+- **Automated Code Review**: Generate feedback on code quality, potential bugs, and optimization suggestions.
+- **Server-Client Architecture**: Modular design for scalability and easy deployment.
+- **Codellama Integration**: Utilize Codellama:7b for state-of-the-art AI-powered code analysis.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prerequisites
+- [Ollama](https://ollama.com/download) installed and configured.
+- Node.js and npm installed for running the client and server.
+- Access to the Codellama:7b model(ollama run codellama:7b).
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. **Clone the Repository**
+    ```bash
+    git clone https://github.com/yourusername/AI-Code-Reviewer.git
+    cd AI-Code-Reviewer
+    ```
 
-- Configure the top-level `parserOptions` property like this:
+2. **Install Dependencies**
+    Navigate to AI-Code-Reviewer directory and install dependencies:
+    ```bash
+    npm install
+    ```
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+3. **Setup Codellama**
+    Ensure Codellama:7b is downloaded and configured with Ollama on your machine.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Usage
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. **Start the Server**
+    ```bash
+    cd server
+    node index.js
+    ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2. **Start the Client in AI-Code-Reviewer folder**
+    ```bash
+    npm run dev
+    ```
+
+3. **Run the ollama model in terminal**
+    ```bash
+    ollama run codellama:7b
+    ```
+
+5. **Access the Application**
+    Open your web browser and navigate to:
+    ```
+    http://localhost:5173/
+    ```
+
+5. **Write/Paste Code for Review**
+    Use the interface to write your code or paste it directly. The AI will provide feedback and suggestions.
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request with your suggestions and improvements.
+
+
+## Acknowledgments
+- [Ollama](https://ollama.com) for providing the Codellama model.
