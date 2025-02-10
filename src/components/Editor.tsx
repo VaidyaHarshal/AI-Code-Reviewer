@@ -30,7 +30,9 @@ const Editor = ({
           EditorView.lineWrapping, // Enable line wrapping
         ]}
         style={{
-          fontSize: "20px",
+          fontSize: "16px",
+          overflow: "auto",
+          height: "100%",
         }}
       />
     </div>

@@ -21,6 +21,8 @@ const Review = ({
             padding: "20px",
             backgroundColor: "#000",
             color: "#ddd",
+            overflow: "auto",
+            height: "100%",
           }}
         />
       )}
