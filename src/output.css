@@ -619,7 +619,7 @@ body {
   width: max-content; /* Equivalent to `w-max` */
   position: absolute; /* Equivalent to `absolute` */
   bottom: 0.75rem; /* Equivalent to `bottom-3` (3 * 0.25rem) */
-  right: 0.75rem; /* Equivalent to `right-3` */
+  right: 1.75rem; /* Equivalent to `right-3` */
   z-index: 50; /* Equivalent to `z-50` */
   background-color: #22c55e; /* Equivalent to `bg-green-500` */
   padding: 0.5rem; /* Equivalent to `p-2` */
